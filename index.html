@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0"
+    />
+    
+    <title>一媒工具</title>
+
+    <style>
+      
+      html, body {
+        line-height: 2em;
+      }
+
+      code {
+        background: yellow;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      .app-title {
+        text-align: center;
+      }
+
+      .app-content {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .app-content h1 {
+        text-align: center;
+      }
+
+      .app-bottom li {
+        float: left;
+        list-style-position: inside;
+        padding: 0;
+        margin: 0 2em;
+      }
+
+    </style>
+
+</head>
+  <body>
+    <div class="app-title">
+      <img src="/resource/img/logo.png" />
+      <h1>一媒工具</h1>
+      <p>
+        一个自媒体内容管理工具
+        <a href="https://pan.baidu.com/s/1gsX5BYb_mwWPcJUFUv9u7w?pwd=bmuc"><button>下载客户端</button></a>
+        <a href="https://hub.docker.com/r/lichunyin/yimei"><button>服务端Docker镜像</button></a>
+      </p>
+    </div>
+    <hr />
+    <div class="app-content">
+      <h1>使用说明</h1>   
+      <p>
+        <ul>
+          <li>
+            一媒工具是一个自媒体内容管理工具。能将短视频同时发布到抖音、今日头条和西瓜视频。
+          </li>
+          <li>
+            一媒工具的使用是免费的，但是使用者需要：
+            <ol>
+              <li>
+                自行申请相关开发账号和权限
+                （
+                  <a href="https://open.douyin.com">抖音,今日头条，西瓜视频</a>,
+                  <a href="https://open.kuaishou.com">快手</a>
+                ）
+              </li>
+              <li>完成服务端部署</li>
+              <li>安装客户端软件</li>
+            </ol>
+          </li>
+          <li>
+            有任何相关问题，可以发邮件给我。<a href="mailto:licy2013@aliyun.com">licy2013@aliyun.com</a>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <h2>客户端下载和安装</h2>
+        <ul>
+          <li>
+            <a href="https://pan.baidu.com/s/1gsX5BYb_mwWPcJUFUv9u7w?pwd=bmuc">
+              百度网盘
+            </a>    
+          </li>
+        </ul>
+      </p>
+      <p>
+        <h2>服务端部署</h2>
+        <ol>
+          <li>
+            通过获取服务端代码自行部署
+            <ul>
+              <li>
+                github: <a href="https://github.com/li-chun-yin/yimei">https://github.com/li-chun-yin/yimei</a>
+              </li>
+              <li>服务端代码是PHP编写的,可以参考网上的php环境部署方式。</li>
+              <li>服务端代码使用了 doctrine/orm 操作数据库，理论上这个类库支持的数据库都可以使用。</li>
+              <li>源代码包含了客户端（client）和服务端（server），服务端部署只需要关心server目录就可以了。</li>
+            </ul>
+          </li>
+          <li>
+            通过docker镜像，快速部署
+            <ul>
+              <li>
+                docker image: 
+                <a href="https://hub.docker.com/r/lichunyin/yimei">https://hub.docker.com/r/lichunyin/yimei</a>
+              </li>
+              <li>
+                Docker 的安装请参考:
+                <a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a>
+              </li>
+              <li>安装了docker的环境上，只需要执行 
+                <code>
+                  docker run -d -p443:443 lichunyin/yimei
+                </code>
+                服务端就能运行了
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </p>
+    </div>
+    <hr />
+    <div class="app-bottom">
+      <p>
+        <marquee>
+          <ul>
+            <li>项目开始于2021年12月12日。</li>
+            <li>至2022年2月16日已经完成了抖音、今日头条、西瓜视频的短视频发布功能。</li>
+          </ul>
+        </marquee>
+      </p>
+    </div>
+  </body>
+</html>
